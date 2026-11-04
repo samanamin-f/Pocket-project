@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101114;
+  color: #f2f2f2;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 22px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #a4e5b3;
+}
+
+.period {
+  color: #92949c;
+  font-size: 13px;
+}
+
+.hero {
+  background: #1b1d22;
+  border: 1px solid #2c2e35;
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.hero p {
+  color: #a1a3ab;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(25px, 5vw, 38px);
+  margin: 12px 0 30px;
+}
+
+.hero h1 small {
+  font-size: 13px;
+  color: #92949c;
+}
+
+.progress-info,
+.remaining {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.progress-info {
+  color: #a1a3ab;
+  margin-bottom: 10px;
+}
+
+.progress-bar,
+.small-progress {
+  background: #303239;
+  height: 9px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill,
+.small-progress div {
+  height: 100%;
+  background: #a4e5b3;
+  border-radius: 20px;
+  transition: width .3s;
+}
+
+.remaining {
+  margin-top: 22px;
+  color: #aaa;
+}
+
+.remaining strong {
+  color: #a4e5b3;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+.section h2 {
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.budget-card {
+  background: #1b1d22;
+  border: 1px solid #2c2e35;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #b9bbc2;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 21px;
+}
+
+.budget-card h3 {
+  margin: 18px 0 5px;
+  font-size: 20px;
+}
+
+.budget-card small {
+  color: #888b94;
+  font-size: 11px;
+}
+
+.small-progress {
+  height: 5px;
+  margin-top: 15px;
+}
+
+.expense-form {
+  background: #1b1d22;
+  border: 1px solid #2c2e35;
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.expense-form label {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.expense-form input,
+.expense-form select {
+  background: #101114;
+  color: white;
+  border: 1px solid #34363e;
+  border-radius: 9px;
+  padding: 13px;
+  font: inherit;
+  outline: none;
+  width: 100%;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #a4e5b3;
+}
+
+.expense-form button {
+  background: #a4e5b3;
+  color: #101114;
+  border: none;
+  padding: 14px;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.transactions {
+  background: #1b1d22;
+  border: 1px solid #2c2e35;
+  border-radius: 15px;
+  padding: 10px 18px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 0;
+  border-bottom: 1px solid #303239;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.transaction-info strong {
+  font-size: 13px;
+}
+
+.transaction-info small {
+  color: #92949c;
+  font-size: 11px;
+}
+
+.transaction-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.transaction-price strong {
+  font-size: 13px;
+  color: #f09a9a;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #f09a9a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.empty {
+  color: #888b94;
+  text-align: center;
+  padding: 25px;
+}
+
+footer {
+  text-align: center;
+  color: #666972;
+  font-size: 11px;
+  padding: 20px;
+}
+
+@media (max-width: 650px) {
+  .app {
+    padding: 20px 14px;
+  }
+
+  .budget-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .budget-card {
+    padding: 14px;
+  }
+
+  .budget-card h3 {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .transaction {
+    align-items: flex-start;
+  }
+  .transaction-price{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+}
